@@ -4,7 +4,6 @@ import ContactUs from "./pages/ContactUs";
 
 import Nav from "./components/Nav";
 import GlobalStyle from "./components/GlobalStyle";
-
 import { Switch, Route } from "react-router-dom";
 
 export default function App() {

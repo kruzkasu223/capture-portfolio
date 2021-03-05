@@ -1,6 +1,6 @@
-import home1 from "../img/home1.png";
 import { MainDiv, Description, Image, Hide } from "../styles";
 import { Link } from "react-router-dom";
+import home1 from "../img/home1.png";
 
 export default function AboutSection() {
     return (

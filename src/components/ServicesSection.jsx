@@ -1,10 +1,11 @@
+import styled from "styled-components";
+import { MainDiv, Description, Image } from "../styles";
+
 import clock from "../img/clock.svg";
 import teamwork from "../img/teamwork.svg";
 import diaphragm from "../img/diaphragm.svg";
 import money from "../img/money.svg";
 import home2 from "../img/home2.png";
-import styled from "styled-components";
-import { MainDiv, Description, Image } from "../styles";
 
 export default function ServicesSection() {
     return (
