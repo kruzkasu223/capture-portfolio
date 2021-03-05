@@ -1,5 +1,6 @@
 import home1 from "../img/home1.png";
 import { MainDiv, Description, Image, Hide } from "../styles";
+import { Link } from "react-router-dom";
 
 export default function AboutSection() {
     return (
@@ -22,7 +23,9 @@ export default function AboutSection() {
                     Contact us for any photography or videography ideas that you
                     have. We have professionals with amazing skills.
                 </p>
-                <button>Contact Us</button>
+                <Link to="/contact">
+                    <button>Contact Us</button>
+                </Link>
             </Description>
             <Image>
                 <img src={home1} alt="Guy with a camera" />
