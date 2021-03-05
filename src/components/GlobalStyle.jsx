@@ -12,7 +12,6 @@ body{
     background-color: #1b1b1b;
     color: white;
     font-family: 'Inter', sans-serif;
-    /* font-family: 'Lobster', cursive; */
 }
 
 *::selection{
@@ -41,10 +40,6 @@ button{
 h2{
     font-weight: lighter;
     font-size: 4rem;
-}
-
-a{
-    font-size: 1.1rem;
 }
 
 span{
