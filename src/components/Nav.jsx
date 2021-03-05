@@ -47,8 +47,8 @@ const StyledNav = styled.nav`
         display: flex;
         list-style-position: inside;
 
-        li {
-            padding-left: 10rem;
+        a {
+            margin-left: 10rem;
         }
     }
 `;
