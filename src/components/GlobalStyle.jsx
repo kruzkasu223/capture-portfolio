@@ -11,6 +11,8 @@ const GlobalStyle = createGlobalStyle`
 body{
     background-color: #1b1b1b;
     color: white;
+    font-family: 'Inter', sans-serif;
+    /* font-family: 'Lobster', cursive; */
 }
 
 *::selection{
@@ -22,16 +24,17 @@ button{
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
-    padding: 1rem 2rem;
+    padding: .75rem 1.5rem;
     border: 3px solid #23d997;
     background: transparent;
-    color: white;
+    color: #23d997;
+    letter-spacing: 2px;
     transition: .3s all ease;
 
     &:hover,
     &:focus{
         background-color: #23d997;
-        color: white;
+        color: #1b1b1b;
     }
 }
 
