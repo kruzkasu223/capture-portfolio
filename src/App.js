@@ -1,5 +1,6 @@
 import AboutUs from "./pages/AboutUs";
 import OurWork from "./pages/OurWork";
+import MovieDetail from "./pages/MovieDetail";
 import ContactUs from "./pages/ContactUs";
 
 import Nav from "./components/Nav";
@@ -20,6 +21,10 @@ export default function App() {
 
                 <Route path="/work" exact>
                     <OurWork />
+                </Route>
+
+                <Route path="/work/:id" exact>
+                    <MovieDetail />
                 </Route>
 
                 <Route path="/contact" exact>
