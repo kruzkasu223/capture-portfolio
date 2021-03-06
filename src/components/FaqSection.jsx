@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { MainDiv } from "../styles";
+import { MainDiv } from "../utils/styles";
 
 export default function FaqSection() {
     return (

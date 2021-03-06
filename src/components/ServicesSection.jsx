@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { MainDiv, Description, Image } from "../styles";
+import { MainDiv, Description, Image } from "../utils/styles";
 
 import clock from "../img/clock.svg";
 import teamwork from "../img/teamwork.svg";
