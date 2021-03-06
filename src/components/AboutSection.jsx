@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { titleAnim, fadeAnim, photoAnim } from "../utils/animation";
 
 import { MainDiv, Description, Image, Hide } from "../utils/styles";
+import Wave from "../utils/Wave";
 import home1 from "../img/home1.png";
 
 export default function AboutSection() {
@@ -41,6 +42,7 @@ export default function AboutSection() {
                     alt="Guy with a camera"
                 />
             </Image>
+            <Wave />
         </MainDiv>
     );
 }
