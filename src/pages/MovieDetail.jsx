@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 import { motion } from "framer-motion";
-import { pageAnimation } from "../utils/animation";
+import { pageAnim } from "../utils/animation";
 import { MovieState } from "../utils/MovieState";
 
 export default function MovieDetail() {
@@ -24,7 +24,7 @@ export default function MovieDetail() {
         <>
             {movie && (
                 <Details
-                    variants={pageAnimation}
+                    variants={pageAnim}
                     initial="hidden"
                     animate="show"
                     exit="exit"

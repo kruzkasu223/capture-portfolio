@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { pageAnimation } from "../utils/animation";
+import { pageAnim } from "../utils/animation";
 
 export default function ContactUs() {
     return (
         <motion.div
-            variants={pageAnimation}
+            variants={pageAnim}
             initial="hidden"
             animate="show"
             exit="exit"

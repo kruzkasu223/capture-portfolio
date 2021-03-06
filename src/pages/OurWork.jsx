@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 import { motion } from "framer-motion";
-import { pageAnimation } from "../utils/animation";
+import { pageAnim } from "../utils/animation";
 
 import athlete from "../img/athlete-small.png";
 import theracer from "../img/theracer-small.png";
@@ -10,12 +10,7 @@ import goodtimes from "../img/goodtimes-small.png";
 
 export default function OurWork() {
     return (
-        <Work
-            variants={pageAnimation}
-            initial="hidden"
-            animate="show"
-            exit="exit"
-        >
+        <Work variants={pageAnim} initial="hidden" animate="show" exit="exit">
             <Movie>
                 <h2>The Athlete</h2>
                 <div className="line"></div>
