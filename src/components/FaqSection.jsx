@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { AnimateSharedLayout } from "framer-motion";
+import Toggle from "./toggle";
 import { MainDiv } from "../utils/styles";
 
 export default function FaqSection() {
@@ -7,49 +9,52 @@ export default function FaqSection() {
             <h2>
                 Any questions? <span>FAQs</span>
             </h2>
-            <div className="question">
-                <h4>How do I start?</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Esse, officiis?
-                    </p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>Daily Schedule</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Esse, officiis?
-                    </p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>Different Payment Methods</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Esse, officiis?
-                    </p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>What products do we offer?</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Esse, officiis?
-                    </p>
-                </div>
-            </div>
+            <AnimateSharedLayout>
+                <Toggle title="How do I start?">
+                    <div className="answer">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Alias ipsa obcaecati quos facere deleniti
+                            incidunt temporibus, id fuga ducimus odio.
+                        </p>
+                    </div>
+                </Toggle>
+
+                <Toggle title="Daily Schedule">
+                    <div className="answer">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Modi voluptas alias laborum sunt repudiandae
+                            earum.
+                        </p>
+                    </div>
+                </Toggle>
+
+                <Toggle title="Different Payment Methods">
+                    <div className="answer">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Minus atque nihil pariatur voluptate adipisci
+                            neque voluptas, voluptatem blanditiis vel maiores.
+                        </p>
+                    </div>
+                </Toggle>
+
+                <Toggle title="What products do we offer?">
+                    <div className="answer">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Voluptas molestias, fugiat repudiandae
+                            reiciendis ad suscipit corporis iste doloremque
+                            eligendi ullam.
+                        </p>
+                    </div>
+                </Toggle>
+            </AnimateSharedLayout>
         </Faq>
     );
 }
@@ -74,11 +79,13 @@ const Faq = styled(MainDiv)`
     }
 
     .question {
-        padding: 3rem 0;
+        margin: 3rem 0;
+        padding: 1rem 0 0 0;
         cursor: pointer;
 
         h4 {
             font-size: 2rem;
+            background-color: #1b1b1b;
         }
         .answer {
             padding: 2rem 0;
