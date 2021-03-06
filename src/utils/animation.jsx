@@ -105,3 +105,14 @@ export const sliderContainer = {
     hidden: { opacity: 1 },
     show: { opacity: 1, transition: { staggerChildren: 0.1 } },
 };
+
+export const ScrollReveal = {
+    hidden: {
+        opacity: 0,
+        transition: { duration: 0.5 },
+    },
+    show: {
+        opacity: 1,
+        transition: { duration: 0.5 },
+    },
+};

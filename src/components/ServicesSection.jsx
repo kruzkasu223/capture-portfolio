@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { MainDiv, Description, Image } from "../utils/styles";
+import { ScrollReveal } from "../utils/animation";
+import { useScroll } from "../utils/useScroll";
 
 import clock from "../img/clock.svg";
 import teamwork from "../img/teamwork.svg";
@@ -8,8 +10,15 @@ import money from "../img/money.svg";
 import home2 from "../img/home2.png";
 
 export default function ServicesSection() {
+    const [element, controls] = useScroll();
+
     return (
-        <Services>
+        <Services
+            variants={ScrollReveal}
+            animate={controls}
+            initial="hidden"
+            ref={element}
+        >
             <Description>
                 <h2>
                     High <span>quality</span> services.
