@@ -2,7 +2,14 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 import { motion } from "framer-motion";
-import { pageAnim } from "../utils/animation";
+import {
+    pageAnim2,
+    titleAnim,
+    photoAnim,
+    lineAnim,
+    sliderAnim,
+    sliderContainer,
+} from "../utils/animation";
 
 import athlete from "../img/athlete-small.png";
 import theracer from "../img/theracer-small.png";
@@ -10,13 +17,32 @@ import goodtimes from "../img/goodtimes-small.png";
 
 export default function OurWork() {
     return (
-        <Work variants={pageAnim} initial="hidden" animate="show" exit="exit">
+        <Work variants={pageAnim2} initial="hidden" animate="show" exit="exit">
+            <motion.div
+                variants={sliderContainer}
+                initial="hidden"
+                animate="show"
+            >
+                <Frame1 variants={sliderAnim}></Frame1>
+                <Frame2 variants={sliderAnim}></Frame2>
+                <Frame3 variants={sliderAnim}></Frame3>
+                <Frame4 variants={sliderAnim}></Frame4>
+            </motion.div>
+
             <Movie>
-                <h2>The Athlete</h2>
-                <div className="line"></div>
-                <Link to="/work/the-athlete">
-                    <img src={athlete} alt="athlete" />
-                </Link>
+                <Hide>
+                    <motion.h2 variants={titleAnim}>The Athlete</motion.h2>
+                </Hide>
+                <motion.div variants={lineAnim} className="line"></motion.div>
+                <Hide>
+                    <Link to="/work/the-athlete">
+                        <motion.img
+                            variants={photoAnim}
+                            src={athlete}
+                            alt="athlete"
+                        />
+                    </Link>
+                </Hide>
             </Movie>
             <Movie>
                 <h2>The Racer</h2>
@@ -50,8 +76,8 @@ const Movie = styled.div`
     padding-bottom: 10rem;
 
     .line {
-        height: 0.5rem;
-        background-color: #ccc;
+        height: 0.35rem;
+        background-color: #23d997;
         margin-bottom: 3rem;
     }
 
@@ -60,4 +86,30 @@ const Movie = styled.div`
         height: 80vh;
         object-fit: cover;
     }
+`;
+
+const Hide = styled.div`
+    overflow: hidden;
+`;
+
+const Frame1 = styled(motion.div)`
+    position: fixed;
+    left: 0;
+    top: 10%;
+    width: 100%;
+    height: 100vh;
+    background-color: #fffebd;
+    z-index: 5;
+`;
+
+const Frame2 = styled(Frame1)`
+    background-color: #ff8ebf;
+`;
+
+const Frame3 = styled(Frame1)`
+    background-color: #8ed2ff;
+`;
+
+const Frame4 = styled(Frame1)`
+    background-color: #8effa0;
 `;

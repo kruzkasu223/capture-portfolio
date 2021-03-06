@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 import { motion } from "framer-motion";
-import { pageAnim } from "../utils/animation";
+import { pageAnim, fadeAnim } from "../utils/animation";
 import { MovieState } from "../utils/MovieState";
 
 export default function MovieDetail() {
@@ -30,7 +30,7 @@ export default function MovieDetail() {
                     exit="exit"
                 >
                     <HeadLine>
-                        <h2>{movie.title}</h2>
+                        <motion.h2 variants={fadeAnim}>{movie.title}</motion.h2>
                         <img src={movie.mainImg} alt={movie.title} />
                     </HeadLine>
                     <Awards>

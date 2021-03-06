@@ -67,7 +67,7 @@ const Faq = styled(MainDiv)`
     }
 
     .faq-line {
-        background-color: #ccc;
+        background-color: #23d997;
         height: 0.2rem;
         margin: 2rem 0;
         width: 100%;
