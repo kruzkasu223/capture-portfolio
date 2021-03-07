@@ -4,6 +4,7 @@ import FaqSection from "../components/FaqSection";
 
 import { motion } from "framer-motion";
 import { pageAnim } from "../utils/animation";
+import { ScrollTop } from "../utils/ScrollTop";
 
 export default function AboutUs() {
     return (
@@ -13,6 +14,7 @@ export default function AboutUs() {
             animate="show"
             exit="exit"
         >
+            <ScrollTop />
             <AboutSection />
             <ServicesSection />
             <FaqSection />

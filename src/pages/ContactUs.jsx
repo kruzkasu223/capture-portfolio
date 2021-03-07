@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { pageAnim, titleAnim, lineAnim } from "../utils/animation";
+import { ScrollTop } from "../utils/ScrollTop";
 import styled from "styled-components";
 
 export default function ContactUs() {
@@ -10,6 +11,7 @@ export default function ContactUs() {
             animate="show"
             exit="exit"
         >
+            <ScrollTop />
             <Title>
                 <Hide>
                     <motion.h2 variants={titleAnim}>Get in Touch...</motion.h2>

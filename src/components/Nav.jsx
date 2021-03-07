@@ -25,6 +25,11 @@ export default function Nav() {
 }
 
 const StyledNav = styled.nav`
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
     min-height: 10vh;
     display: flex;
     justify-content: space-between;

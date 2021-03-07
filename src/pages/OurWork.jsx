@@ -12,6 +12,7 @@ import {
     ScrollReveal,
 } from "../utils/animation";
 import { useScroll } from "../utils/useScroll";
+import { ScrollTop } from "../utils/ScrollTop";
 
 import athlete from "../img/athlete-small.png";
 import theracer from "../img/theracer-small.png";
@@ -20,9 +21,11 @@ import goodtimes from "../img/goodtimes-small.png";
 export default function OurWork() {
     const [element, controls] = useScroll();
     const [element2, controls2] = useScroll();
+    const [element3, controls3] = useScroll();
 
     return (
         <Work variants={pageAnim2} initial="hidden" animate="show" exit="exit">
+            <ScrollTop />
             <motion.div
                 variants={sliderContainer}
                 initial="hidden"
@@ -34,7 +37,12 @@ export default function OurWork() {
                 <Frame4 variants={sliderAnim}></Frame4>
             </motion.div>
 
-            <Movie>
+            <Movie
+                variants={ScrollReveal}
+                animate={controls}
+                initial="hidden"
+                ref={element}
+            >
                 <Hide>
                     <motion.h2 variants={titleAnim}>The Athlete</motion.h2>
                 </Hide>
@@ -52,28 +60,44 @@ export default function OurWork() {
 
             <Movie
                 variants={ScrollReveal}
-                animate={controls}
-                initial="hidden"
-                ref={element}
-            >
-                <h2>The Racer</h2>
-                <motion.div variants={lineAnim} className="line"></motion.div>
-                <Link to="/work/the-racer">
-                    <img src={theracer} alt="theracer" />
-                </Link>
-            </Movie>
-
-            <Movie
-                variants={ScrollReveal}
                 animate={controls2}
                 initial="hidden"
                 ref={element2}
             >
-                <h2>Good Times</h2>
+                <Hide>
+                    <motion.h2 variants={titleAnim}>The Racer</motion.h2>
+                </Hide>
                 <motion.div variants={lineAnim} className="line"></motion.div>
-                <Link to="/work/good-times">
-                    <img src={goodtimes} alt="goodtimes" />
-                </Link>
+                <Hide>
+                    <Link to="/work/the-racer">
+                        <motion.img
+                            variants={photoAnim}
+                            src={theracer}
+                            alt="theracer"
+                        />
+                    </Link>
+                </Hide>
+            </Movie>
+
+            <Movie
+                variants={ScrollReveal}
+                animate={controls3}
+                initial="hidden"
+                ref={element3}
+            >
+                <Hide>
+                    <motion.h2 variants={titleAnim}>Good Times</motion.h2>
+                </Hide>
+                <motion.div variants={lineAnim} className="line"></motion.div>
+                <Hide>
+                    <Link to="/work/good-times">
+                        <motion.img
+                            variants={photoAnim}
+                            src={goodtimes}
+                            alt="goodtimes"
+                        />
+                    </Link>
+                </Hide>
             </Movie>
         </Work>
     );

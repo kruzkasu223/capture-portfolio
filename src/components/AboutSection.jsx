@@ -1,14 +1,27 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { titleAnim, fadeAnim, photoAnim } from "../utils/animation";
+import {
+    titleAnim,
+    fadeAnim,
+    photoAnim,
+    ScrollReveal,
+} from "../utils/animation";
+import { useScroll } from "../utils/useScroll";
 
 import { MainDiv, Description, Image, Hide } from "../utils/styles";
 import Wave from "../utils/Wave";
 import home1 from "../img/home1.png";
 
 export default function AboutSection() {
+    const [element, controls] = useScroll();
+
     return (
-        <MainDiv>
+        <MainDiv
+            variants={ScrollReveal}
+            animate={controls}
+            initial="hidden"
+            ref={element}
+        >
             <Description>
                 <motion.div>
                     <Hide>
