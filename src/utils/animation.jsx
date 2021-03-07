@@ -7,9 +7,9 @@ export const pageAnim = {
         opacity: 1,
         y: 0,
         transition: {
-            duration: 0.5,
+            duration: 0.75,
             when: "beforeChildren",
-            staggerChildren: 0.25,
+            staggerChildren: 0.5,
         },
     },
     exit: {
@@ -44,7 +44,7 @@ export const titleAnim = {
     show: {
         y: 0,
         transition: {
-            duration: 0.75,
+            duration: 0.5,
             ease: "easeOut",
         },
     },
@@ -55,7 +55,7 @@ export const fadeAnim = {
     show: {
         opacity: 1,
         transition: {
-            duration: 0.75,
+            duration: 1,
             ease: "easeOut",
         },
     },
@@ -109,12 +109,10 @@ export const sliderContainer = {
 export const ScrollReveal = {
     hidden: {
         opacity: 0,
-        scale: 1.1,
-        transition: { duration: 0.5, when: "beforeChildren" },
+        transition: { duration: 0.25, when: "beforeChildren" },
     },
     show: {
         opacity: 1,
-        scale: 1,
-        transition: { duration: 0.5, when: "beforeChildren" },
+        transition: { duration: 0.25, when: "beforeChildren" },
     },
 };

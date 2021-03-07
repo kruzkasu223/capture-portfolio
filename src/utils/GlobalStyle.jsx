@@ -8,11 +8,21 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 }
 
+html{
+    @media (max-width: 1700px){
+        font-size: 75%;
+    }
+    
+}
+
 body{
+    overflow-x: hidden;
     background-color: #1b1b1b;
     color: white;
     font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
+    @media (max-width: 1000px){
+        font-size: 75%;
+    }
 }
 
 *::selection{
@@ -41,6 +51,13 @@ button{
 h2{
     font-weight: lighter;
     font-size: 4rem;
+    @media (max-width: 1000px){
+        font-size: 3rem;
+    }
+}
+
+h4{
+    font-size: 2rem;
 }
 
 span{
@@ -49,6 +66,7 @@ span{
 }
 
 a {
+    font-size: 1.1rem;
     color: white;
     text-decoration: none;
 }

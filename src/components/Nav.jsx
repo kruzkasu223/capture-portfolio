@@ -14,7 +14,7 @@ export default function Nav() {
             </h1>
             <ul>
                 <li>
-                    <Link to="/">1. About Us</Link>
+                    <Link to="/">About Us</Link>
                     <Line
                         transition={{ duration: 0.75 }}
                         initial={{ width: "0%" }}
@@ -23,7 +23,7 @@ export default function Nav() {
                 </li>
 
                 <li>
-                    <Link to="/work">2. Our Work</Link>
+                    <Link to="/work">Our Work</Link>
                     <Line
                         transition={{ duration: 0.75 }}
                         initial={{ width: "0%" }}
@@ -32,7 +32,7 @@ export default function Nav() {
                 </li>
 
                 <li>
-                    <Link to="/contact">3. Contact Us</Link>
+                    <Link to="/contact">Contact Us</Link>
                     <Line
                         transition={{ duration: 0.75 }}
                         initial={{ width: "0%" }}
@@ -49,30 +49,45 @@ export default function Nav() {
 const StyledNav = styled.nav`
     position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
     z-index: 10;
     min-height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5rem;
+    padding: 1rem 10rem;
+    margin: auto;
     background-color: #282828;
 
     #logo {
         font-family: "Lobster", cursive;
         font-weight: lighter;
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     ul {
         display: flex;
+        flex-wrap: wrap;
         list-style: none;
 
         li {
             margin-left: 10rem;
             position: relative;
         }
+    }
+    @media (max-width: 900px) {
+        padding: 1.5rem 5rem 1rem;
+        flex-direction: column;
+        ul {
+            justify-content: center;
+            align-items: center;
+            margin: 0.5rem 0;
+            li {
+                margin: 1rem;
+            }
+        }
+    }
+    @media (max-width: 400px) {
+        padding: 1.5rem 1rem 1rem;
     }
 `;
 

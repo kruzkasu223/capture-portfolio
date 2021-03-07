@@ -106,7 +106,10 @@ export default function OurWork() {
 const Work = styled(motion.div)`
     min-height: 100vh;
     overflow: hidden;
-    padding: 5rem;
+    padding: 5rem 10rem;
+    @media (max-width: 1300px) {
+        padding: 2rem 2rem;
+    }
 
     h2 {
         padding: 1rem 0;
@@ -126,6 +129,16 @@ const Movie = styled(motion.div)`
         width: 100%;
         height: 80vh;
         object-fit: cover;
+    }
+    @media (max-width: 1000px) {
+        img {
+            height: 70vh;
+        }
+    }
+    @media (max-width: 700px) {
+        img {
+            height: 50vh;
+        }
     }
 `;
 

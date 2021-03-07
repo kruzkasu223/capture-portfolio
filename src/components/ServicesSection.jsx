@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { MainDiv, Description, Image } from "../utils/styles";
-import { ScrollReveal } from "../utils/animation";
+import { photoAnim, ScrollReveal } from "../utils/animation";
 import { useScroll } from "../utils/useScroll";
 
 import clock from "../img/clock.svg";
@@ -55,7 +56,11 @@ export default function ServicesSection() {
                 </Cards>
             </Description>
             <Image>
-                <img src={home2} alt="just a camera" />
+                <motion.img
+                    variants={photoAnim}
+                    src={home2}
+                    alt="just a camera"
+                />
             </Image>
         </Services>
     );
@@ -74,10 +79,16 @@ const Services = styled(MainDiv)`
 const Cards = styled.div`
     display: flex;
     flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 `;
 
 const Card = styled.div`
-    flex-basis: 20rem;
+    width: 20rem;
+    height: 15rem;
+    display: grid;
+    place-items: center;
     .icon {
         display: flex;
         align-items: center;

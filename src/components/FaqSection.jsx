@@ -93,7 +93,6 @@ const Faq = styled(MainDiv)`
         cursor: pointer;
 
         h4 {
-            font-size: 2rem;
             background-color: #1b1b1b;
         }
         .answer {

@@ -43,16 +43,32 @@ export default function ContactUs() {
 }
 
 const ContactStyle = styled(motion.div)`
-    padding: 5rem;
+    padding: 5rem 10rem;
     min-height: 90vh;
+    @media (max-width: 1300px) {
+        padding: 5rem;
+    }
+    @media (max-width: 600px) {
+        padding: 2rem;
+        & * {
+            font-size: 2rem;
+        }
+    }
 `;
 
 const Title = styled.div`
-    margin-bottom: 4rem;
+    margin: 4rem 0;
+    div h2 {
+        font-size: 4rem;
+    }
     .line {
         height: 0.35rem;
         background-color: #23d997;
-        margin-bottom: 3rem;
+    }
+    @media (max-width: 1500px) {
+        div h2 {
+            font-size: 3rem;
+        }
     }
 `;
 
@@ -62,9 +78,13 @@ const Hide = styled.div`
 
 const Circle = styled.div`
     border-radius: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 3rem;
+    height: 3rem;
     background-color: #555;
+    @media (max-width: 1300px) {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 `;
 
 const Social = styled(motion.div)`
@@ -72,7 +92,6 @@ const Social = styled(motion.div)`
     align-items: center;
 
     h2 {
-        font-size: 2rem;
         margin: 2rem;
         color: #aaa;
     }
