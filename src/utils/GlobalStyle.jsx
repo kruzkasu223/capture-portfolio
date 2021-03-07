@@ -48,6 +48,11 @@ span{
     color: #23d997;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 p{
     padding: 3rem 0;
     color: #ccc;

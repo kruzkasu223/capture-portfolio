@@ -1,7 +1,10 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function Nav() {
+    const { pathname } = useLocation();
     return (
         <StyledNav>
             <h1>
@@ -9,17 +12,36 @@ export default function Nav() {
                     Capture
                 </Link>
             </h1>
-            <ol>
-                <Link to="/">
-                    <li>About Us</li>
-                </Link>
-                <Link to="/work">
-                    <li>Our Work</li>
-                </Link>
-                <Link to="/contact">
-                    <li>Contact Us</li>
-                </Link>
-            </ol>
+            <ul>
+                <li>
+                    <Link to="/">1. About Us</Link>
+                    <Line
+                        transition={{ duration: 0.75 }}
+                        initial={{ width: "0%" }}
+                        animate={{ width: pathname === "/" ? "70%" : "0%" }}
+                    />
+                </li>
+
+                <li>
+                    <Link to="/work">2. Our Work</Link>
+                    <Line
+                        transition={{ duration: 0.75 }}
+                        initial={{ width: "0%" }}
+                        animate={{ width: pathname === "/work" ? "70%" : "0%" }}
+                    />
+                </li>
+
+                <li>
+                    <Link to="/contact">3. Contact Us</Link>
+                    <Line
+                        transition={{ duration: 0.75 }}
+                        initial={{ width: "0%" }}
+                        animate={{
+                            width: pathname === "/contact" ? "70%" : "0%",
+                        }}
+                    />
+                </li>
+            </ul>
         </StyledNav>
     );
 }
@@ -43,17 +65,21 @@ const StyledNav = styled.nav`
         font-size: 1.5rem;
     }
 
-    a {
-        color: white;
-        text-decoration: none;
-    }
-
-    ol {
+    ul {
         display: flex;
-        list-style-position: inside;
+        list-style: none;
 
-        a {
+        li {
             margin-left: 10rem;
+            position: relative;
         }
     }
+`;
+
+const Line = styled(motion.div)`
+    height: 0.25rem;
+    background-color: #23d997;
+    width: 5%;
+    position: absolute;
+    bottom: -40%;
 `;
