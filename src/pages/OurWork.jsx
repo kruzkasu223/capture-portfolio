@@ -14,9 +14,9 @@ import {
 import { useScroll } from "../utils/useScroll";
 import { ScrollTop } from "../utils/ScrollTop";
 
-import athlete from "../img/athlete-small.png";
-import theracer from "../img/theracer-small.png";
-import goodtimes from "../img/goodtimes-small.png";
+import athlete from "../img/athlete-small.jpg";
+import theracer from "../img/theracer-small.jpg";
+import goodtimes from "../img/goodtimes-small.jpg";
 
 export default function OurWork() {
     const [element, controls] = useScroll();

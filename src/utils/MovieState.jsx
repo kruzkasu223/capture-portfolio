@@ -1,8 +1,8 @@
-import athlete from "../img/athlete-small.png";
-import athlete2 from "../img/athlete2.png";
-import theracer from "../img/theracer-small.png";
+import athlete from "../img/athlete-small.jpg";
+import athlete2 from "../img/athlete2.jpg";
+import theracer from "../img/theracer-small.jpg";
 import theracer2 from "../img/the-racer2.jpg";
-import goodtimes from "../img/goodtimes-small.png";
+import goodtimes from "../img/goodtimes-small.jpg";
 import goodtimes2 from "../img/good-times2.jpg";
 
 export const MovieState = () => {
